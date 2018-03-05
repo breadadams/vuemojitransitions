@@ -1,0 +1,136 @@
+@import '../../assets/scss/vars';
+
+.side-glow {
+  cursor: pointer;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  opacity: 0;
+  z-index: 10;
+  outline: none;
+  overflow: hidden;
+  transition: left 0.7s ease-in, right 0.7s ease-in, opacity 0.7s ease-in, width 0.7s ease-in;
+
+  &.-right-glow {
+    right: -5%;
+    background: linear-gradient(
+      to left,
+      rgba(255, 121, 63, 1),
+      rgba(255, 255, 255, 0)
+    );
+
+    &.-white-glow {
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &.-visible {
+      right: 0;
+    }
+  }
+
+  &.-left-glow {
+    left: -5%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 121, 63, 1),
+      rgba(255, 255, 255, 0)
+    );
+
+    &.-white-glow {
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &.-visible {
+      left: 0;
+    }
+  }
+
+  &.-visible {
+    opacity: 1;
+    width: 38%;
+    cursor: none;
+    transition: left 1s ease-out, right 1s ease-out, opacity 1s ease-out, width 1.2s ease;
+  }
+}
+
+.inner-hover-detect {
+  display: block;
+  height: 100%;
+  width: 40%;
+
+  .-right-glow & {
+    margin-left: auto;
+  }
+}
+
+.cursor-magnet {
+  width: 150px;
+  position: fixed;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-100%, -100%);
+  outline: none;
+  pointer-events: none;
+  transition: left 0.25s ease, top 0.25s ease, opacity 0.25s ease,
+    visibility 0.25s ease, transform 0.25s ease;
+
+  .label {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+
+  .icon {
+    display: block;
+
+    &::before {
+      content: '→';
+      display: inline-block;
+      font-size: 50px;
+      color: $black;
+    }
+  }
+
+  .-left-glow & {
+    transform: translate(0, -100%);
+
+    .label {
+      transform: translateX(50%);
+    }
+
+    .icon {
+      transform: rotateZ(180deg);
+      text-align: left;
+    }
+  }
+
+  .-right-glow & {
+    .label {
+      transform: translateX(-50%);
+      text-align: left;
+    }
+
+    .icon {
+      text-align: left;
+    }
+  }
+
+  .side-glow.-visible & {
+    opacity: 1;
+    visibility: visible;
+    transition: left 0.25s ease, top 0.25s ease, opacity 0.75s ease,
+      visibility 0.25s ease, transform 0.25s ease;
+  }
+}

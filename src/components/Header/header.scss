@@ -1,0 +1,134 @@
+@import '../../assets/scss/vars';
+
+.header {
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 20;
+  padding: 0 15px;
+
+  &:before {
+    content: '';
+    display: block;
+    background: linear-gradient(
+      to bottom,
+      rgba(187, 226, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-25%);
+    transition: height 1s ease-in, opacity 1s ease, transform 0.9s ease;
+    z-index: 21;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &.-expanded {
+    &:before {
+      transition: height 0.9s ease-out, opacity 1s ease, transform 1.2s ease-out;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      height: 220px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.-expanded {
+    cursor: default;
+
+    &:before {
+      height: 400px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.header-inner {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-logo {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: $black;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 23;
+  transition: color .7s ease-in;
+
+  &:before,
+  &:after {
+    content: '';
+    background: $black;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease;
+  }
+
+  &:before {
+    width: 10px;
+    height: 2px;
+    left: calc(50% - 5px);
+    top: calc(50% - 1px);
+  }
+
+  &:after {
+    width: 2px;
+    height: 10px;
+    left: calc(50% - 1px);
+    top: calc(50% - 5px);
+  }
+
+  .header:hover &,
+  .header.-expanded & {
+    color: transparent;
+    user-select: none;
+    transition: color .8s ease-out;
+
+    &:before,
+    &:after {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.6s ease-out;
+    }
+  }
+
+  .header.-expanded & {
+    &:before,
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.active-breadcrumb {
+  display: inline-block;
+  font-size: 18px;
+  z-index: 23;
+  position: relative;
+}
