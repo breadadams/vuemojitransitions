@@ -1,14 +1,14 @@
-<main>
+<main class="bg-clown">
   <fade-scroll :sections="4" @change="fadeScrollChange">
     <template slot="content" slot-scope="{ visibleSection }">
 
       <fullscreen-section v-if="visibleSection === 1" key="1" bg-image="/static/images/its_magic.gif" />
 
-      <fullscreen-section v-if="visibleSection === 2" key="2" bg-image="/static/images/cat_paws.gif" />
+      <fullscreen-section v-if="visibleSection === 2" key="2" bg-image="/static/images/cat_paws.gif" class="bg-cat" />
 
-      <fullscreen-section v-if="visibleSection === 3" key="3" bg-image="/static/images/all_the_biscuits.gif" />
+      <fullscreen-section v-if="visibleSection === 3" key="3" bg-image="/static/images/all_the_biscuits.gif" class="bg-dog" />
 
-      <fullscreen-section v-if="visibleSection === 4" key="4" bg-image="/static/images/turtle_dance.gif" />
+      <fullscreen-section v-if="visibleSection === 4" key="4" bg-image="/static/images/turtle_dance.gif" class="bg-turtle" />
 
     </template>
   </fade-scroll>

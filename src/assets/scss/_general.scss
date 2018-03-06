@@ -3,20 +3,28 @@ body {
   margin: 0;
   transition: background 1s ease;
   background-color: $white;
+}
 
-  &.bg-dog {
-    background-color: $dog-color;
-  }
+.bg-dog {
+  background-color: $dog-color;
+}
 
-  &.bg-poop {
-    background-color: $poop-color;
-  }
+.bg-poop {
+  background-color: $poop-color;
+}
 
-  &.bg-turtle {
-    background-color: $turtle-color;
-  }
+.bg-turtle {
+  background-color: $turtle-color;
+}
 
-  &.bg-santa {
-    background-color: $santa-color;
-  }
+.bg-santa {
+  background-color: $santa-color;
+}
+
+.bg-clown {
+  background-color: $clown-color;
+}
+
+.bg-cat {
+  background-color: $cat-color;
 }
