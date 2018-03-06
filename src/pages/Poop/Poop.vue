@@ -3,14 +3,14 @@
 <script>
 import strings from 'strings'
 
-const {poopTitle, homeTitle, santaTitle} = strings
+const {poopTitle, turtleTitle, santaTitle} = strings
 
 export default {
   name: 'Poop',
   data () {
     return {
       poopTitle,
-      homeTitle,
+      turtleTitle,
       santaTitle
     }
   }
