@@ -6,6 +6,7 @@
         <router-link class="nav-item link" @click.native="navItemClick" to="/dog">{{navLabels.dogTitle}}</router-link>
         <router-link class="nav-item link" @click.native="navItemClick" to="/santa">{{navLabels.santaTitle}}</router-link>
         <router-link class="nav-item link" @click.native="navItemClick" to="/poop">{{navLabels.poopTitle}}</router-link>
+        <router-link class="nav-item link" @click.native="navItemClick" to="/turtle">{{navLabels.turtleTitle}}</router-link>
       </nav>
     </div>
   </transition>
@@ -14,7 +15,7 @@
 <script>
 import strings from 'strings'
 
-const { homeTitle, dogTitle, poopTitle, santaTitle } = strings
+const { homeTitle, dogTitle, poopTitle, santaTitle, turtleTitle } = strings
 
 export default {
   name: 'Menu',
@@ -26,7 +27,7 @@ export default {
   },
   data () {
     return {
-      navLabels: { homeTitle, dogTitle, poopTitle, santaTitle }
+      navLabels: { homeTitle, dogTitle, poopTitle, santaTitle, turtleTitle }
     }
   },
   methods: {
@@ -57,10 +58,16 @@ export default {
 }
 
 .nav-item {
-  font-size: 40px;
+  font-size: 36px;
+  opacity: 0.6;
+  transition: font-size 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  backface-visibility: hidden;
+  transform: translateX(0.001px);
 
-  &.router-link-exact-active {
-    text-decoration: underline;
+  &.router-link-exact-active,
+  &:hover {
+    opacity: 1;
+    font-size: 48px;
   }
 
   &:not(:last-of-type) {
