@@ -5,9 +5,16 @@ import vOutsideEvents from 'vue-outside-events'
 import router from './router'
 import store from './store'
 import App from './App.vue'
+
 import 'assets/scss/app.scss'
 
+import SideGlowLink from 'components/SideGlowLink/SideGlowLink.vue'
+import HugeEmoji from 'components/HugeEmoji/HugeEmoji.vue'
+
 Vue.use(vOutsideEvents)
+
+Vue.component('side-glow-link', SideGlowLink)
+Vue.component('huge-emoji', HugeEmoji)
 
 Vue.config.productionTip = false
 
@@ -16,6 +23,6 @@ new Vue({
   el: '#app',
   store,
   router,
-  components: { App },
+  components: {App},
   template: `<App />`
 })

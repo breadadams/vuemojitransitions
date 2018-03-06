@@ -3,7 +3,6 @@
 <script>
 import FadeScroll from 'components/FadeScroll/FadeScroll.vue'
 import FullscreenSection from 'components/FullscreenSection/FullscreenSection.vue'
-import SideGlowLink from 'components/SideGlowLink/SideGlowLink.vue'
 import strings from 'strings'
 
 const { homeTitle, catTitle, dogTitle, santaTitle, turtleTitle } = strings
@@ -30,8 +29,7 @@ export default {
   },
   components: {
     'fade-scroll': FadeScroll,
-    'fullscreen-section': FullscreenSection,
-    'side-glow-link': SideGlowLink
+    'fullscreen-section': FullscreenSection
   }
 }
 </script>
