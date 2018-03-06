@@ -11,4 +11,12 @@ body {
   &.bg-poop {
     background-color: $poop-color;
   }
+
+  &.bg-turtle {
+    background-color: $turtle-color;
+  }
+
+  &.bg-santa {
+    background-color: $santa-color;
+  }
 }
