@@ -1,9 +1,13 @@
 <template src="./home.html" />
 
 <script>
-import FadeScroll from 'components/FadeScroll/FadeScroll.vue'
-import FullscreenSection from 'components/FullscreenSection/FullscreenSection.vue'
-import strings from 'strings'
+import FadeScroll from '@/components/FadeScroll/FadeScroll'
+import FullscreenSection from '@/components/FullscreenSection/FullscreenSection'
+import strings from '@/strings'
+import image1 from '@/assets/images/its_magic.gif';
+import image2 from '@/assets/images/cat_paws.gif';
+import image3 from '@/assets/images/all_the_biscuits.gif';
+import image4 from '@/assets/images/turtle_dance.gif';
 
 const { homeTitle, catTitle, dogTitle, santaTitle, turtleTitle } = strings
 
@@ -19,7 +23,11 @@ export default {
   data () {
     return {
       dogTitle,
-      santaTitle
+      santaTitle,
+      image1,
+      image2,
+      image3,
+      image4
     }
   },
   methods: {

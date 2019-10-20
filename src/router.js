@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import strings from './strings'
-import store from './store'
 
-import Home from 'pages/Home/Home.vue'
-import Dog from 'pages/Dog/Dog.vue'
-import Poop from 'pages/Poop/Poop.vue'
-import Santa from 'pages/Santa/Santa.vue'
-import Turtle from 'pages/Turtle/Turtle.vue'
+import strings from '@/strings'
+import store from '@/store'
+import Home from '@/pages/Home/Home'
+import Dog from '@/pages/Dog/Dog'
+import Poop from '@/pages/Poop/Poop'
+import Santa from '@/pages/Santa/Santa'
+import Turtle from '@/pages/Turtle/Turtle'
 
 Vue.use(VueRouter)
 

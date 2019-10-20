@@ -1,21 +1,22 @@
 <template>
   <header
     :class="headerClasses"
-    @click="headerClick">
+    @click="headerClick"
+    v-click-outside="headerClickOutside">
     <div class="header-inner">
       <span class="header-logo" @click="logoClick">{{logoLabel}}</span>
       <fade-transition slow mode="out-in">
         <p v-if="!menuVisible" class="active-breadcrumb" :key="this.$store.state.activeBreadcrumb">{{this.$store.state.activeBreadcrumb}}</p>
       </fade-transition>
     </div>
-    <header-menu :visible="menuVisible" v-click-outside="headerClickOutside" @nav-item-click="navItemClick" />
+    <header-menu :visible="menuVisible" @nav-item-click="navItemClick" />
   </header>
 </template>
 
 <script>
-import Menu from 'components/Menu/Menu.vue'
-import FadeTransition from 'components/FadeTransition/FadeTransition.vue'
-import strings from 'strings'
+import Menu from '@/components/Menu/Menu'
+import FadeTransition from '@/components/FadeTransition/FadeTransition'
+import strings from '@/strings'
 
 export default {
   name: 'Header',

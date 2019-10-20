@@ -15,8 +15,8 @@
 
 <script>
 import throttle from 'lodash/throttle'
-import ScrollDown from 'components/ScrollDown/ScrollDown.vue'
-import FadeTransition from 'components/FadeTransition/FadeTransition.vue'
+import ScrollDown from '@/components/ScrollDown/ScrollDown'
+import FadeTransition from '@/components/FadeTransition/FadeTransition'
 
 export default {
   name: 'FadeScroll',

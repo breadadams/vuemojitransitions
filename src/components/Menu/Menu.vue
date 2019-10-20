@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import strings from 'strings'
+import strings from '@/strings'
 
 const { homeTitle, dogTitle, poopTitle, santaTitle, turtleTitle } = strings
 

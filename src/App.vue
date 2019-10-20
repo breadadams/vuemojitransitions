@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Header from 'components/Header/Header.vue'
-import FadeTransition from 'components/FadeTransition/FadeTransition.vue'
+import Header from '@/components/Header/Header'
+import FadeTransition from '@/components/FadeTransition/FadeTransition'
 export default {
   name: 'App',
   components: {
