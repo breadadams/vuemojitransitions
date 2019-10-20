@@ -11,10 +11,10 @@ To launch Webpack's bundler run the following:
 
 ```bash
 ### yarn
-yarn start
+yarn serve
 
 ### npm
-npm start
+npm serve
 ```
 
 This will open a HMR/live-reloading instance on [`localhost:8080`](http://localhost:8080).

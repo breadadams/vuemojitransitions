@@ -1,7 +1,7 @@
 <template src="./poop.html" />
 
 <script>
-import strings from 'strings'
+import strings from '@/strings'
 
 const {poopTitle, turtleTitle, santaTitle} = strings
 

@@ -21,7 +21,7 @@
 
 <script>
 import throttle from 'lodash/throttle'
-import { checkLeftOrRight } from 'utils'
+import { checkLeftOrRight } from '@/utils'
 export default {
   name: 'SideGlowLink',
   props: {
